@@ -1,24 +1,36 @@
-# landing-and-admin
+# Landing & Admin (Vue.js)
+Vue.js, Pug, Scss
 
-## Project setup
+**Test task for Uprock**:  
+The application that implements...  
+**Author**: [`Gennady Yegupov`](https://github.com/yegupov)
+
+![app-gif](https://user-images.githubusercontent.com/44179657/192278862-3fc9c7a3-8d7e-4313-b547-ef2d205fd366.gif)
+
+## Quick Start
+To run this app, clone the repository and install dependencies:
+
 ```
-npm install
+$ git clone https://github.com/yegupov/vuejs-landing-and-admin.git
+$ cd vuejs-landing-and-admin
+$ npm install
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Then run app:  
+`$ npm run serve`
 
-### Compiles and minifies for production
+Navigate to: [`http://localhost:8080/`](http://localhost:8080/).
+
+## Sign in
+Admin:  
+email: uprock@mail.com,  
+password: qqwwaass
+
+Or manager:  
+email: startup@mail.com,  
+password: zxcvbn
+
+## Compiles and minifies for production
 ```
 npm run build
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -1,0 +1,32 @@
+// font
+$font_default: 'gilroy';
+$font_companion: 'mazius';
+
+// color
+$text-color: #414141;
+$text-color_companion: #383838;
+$text-color-gray: #a2a2a2;
+$links-color: #14cf93; /* #4b6fd7; */
+$links-color-hover: #84e6c7;
+$lines-color: #eeeeee;  /* #d9dee4; - blue */
+$lines-color-dark: #bdbdbd;  /*  2c413f  */
+
+$bg-color-beige: #fcfaf8;  /* rgba(252, 250, 248, 0.7) */
+$bg-color-gray: #f2f2f2;
+$bg-color-dark: #07453a;     /* 253b39; */
+
+$color-primary: #2196f3;
+$color-success: #14cf93;  /* #359a35; */
+$color-warning: #eb7e2c;
+$color-danger: #c12248;
+
+$border-radius: 20px;
+
+// media query
+$bp-desktop-hd: 1800px;
+$bp-desktop: 1400px;
+$bp-notebook: 1200px;
+$bp-netbook: 1024px;
+$bp-tablet: 767.9px;
+$bp-phone: 576px;
+$bp-phone-small: 414px;
