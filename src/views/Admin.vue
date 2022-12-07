@@ -15,7 +15,7 @@
         p All data is stored in <b>Vuex</b> storage. <b>Data.js</b> has the initial state of the data: 2 users, 5 works, 5 reviews, and 3 skills.
         p In the admin panel, you can perform the operations of creating, editing and deleting positions (<b>CRUD</b>), as well as resetting the states to the initial values.
         p Admin panel <b>code on GitHub</b>:&nbsp;
-          a(href="#") vue-landing-and-admin
+          a(href="https://github.com/yegupov/vuejs-landing-and-admin" target="_blank") vue-landing-and-admin
 
       ul.cards
         li.cards__item
@@ -78,5 +78,5 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../styles/admin.scss";
+  @import "../styles/style.scss";
 </style>

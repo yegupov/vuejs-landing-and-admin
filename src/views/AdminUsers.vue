@@ -12,7 +12,7 @@
           h3 My account
           .card
             .card__img
-              img(:src="`/img/${loggedUser.avatar}`" alt="User avatar")
+              img(v-if="loggedUser !== null" :src="`/img/${loggedUser.avatar}`" alt="User avatar")
             .card__desc
               p
                 b {{loggedUser.status}}
@@ -21,12 +21,14 @@
         .article
           h3 Users list
           ul.table.users-list
+
             li.table__row
               .users-list__id ID
               .users-list__username Username
               .users-list__status Status
               .users-list__image Avatar
               .users-list__email Email
+
             li.table__row(v-for="user in allUsers" :key="user.id")
               .users-list__id(data-label="ID") {{user.id}}
               .users-list__username(data-label="Username")
@@ -74,7 +76,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/admin.scss";
+@import "../styles/style.scss";
 
 .flexbox {
   align-items: flex-start;

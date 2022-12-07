@@ -64,7 +64,7 @@ export const data = {
     },
     {
       id: 3,
-      avatar: "review-2.jpg",
+      avatar: "review-3.jpg",
       author: "Max Strehler",
       position: "Theater director",
       text: "Designed posters for my #StrelerTheatre with Gennady. We have been cooperating for more than a year and are always satisfied with our tandem and the result ✌ Gennady promptly and creatively approaches the tasks set, which is especially important when the 'face' of your project is being created. If viewers' reviews of our posters could be posted here, then there would be no space left on the platform. We work further!😎"
@@ -78,7 +78,7 @@ export const data = {
     },
     {
       id: 5,
-      avatar: "review-2.jpg",
+      avatar: "review-4.jpg",
       author: "Olga",
       position: "Commercial Director",
       text: "This is the second site I order from Gennady, he is a professional with a capital letter. We worked in a nightmare and the shortest possible time. Gennady was surprised at my impudence, but we all made it. He has his own opinion on my opinion (in our hearts we are all designers), he does not follow his lead, and this just gives an excellent result. The site was made exactly as I wanted (in terms of style, convenience), despite the fact that I really could not explain anything.  Listen to him and you will be happy! 😀😇 Further I plan to cooperate with Gennady. Let the professionals do it. Thanks again!!!"

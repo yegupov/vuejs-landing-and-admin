@@ -134,7 +134,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../styles/admin.scss";
+@import "../styles/style.scss";
 
 .modal {
   position: fixed;
@@ -188,59 +188,59 @@ export default {
     height: 100vh;
     background-color: rgba(40,52,65,1);
   }
-}
 
-.form-group {
-  position: relative;
-  height: 45px;
-  margin: 0 0 20px;
-  text-align: center;
+  .form-group {
+    position: relative;
+    height: 45px;
+    margin: 0 0 20px;
+    text-align: center;
 
-  .form-label {
-    position: absolute;
-    display: inline-block;
-    left: 0; top: 0;
-    width: auto;
-    height: 15px;
-    transform: translate(0px, 1px);
-    transform-origin: 0 0;
-    white-space: nowrap;
-    will-change: transform;
-    font-size: 13px;
-    color: #666;
-    padding: 0;
-    background-color: #fff;
-    cursor: text;
-    z-index: 10;
-    transition: transform .5s;
-  }
-
-  .form-control {
-    position: absolute;
-    left: 0; top: 0; bottom: 3px; right: 0;
-    width: 100%;
-    padding: 15px 0;
-    letter-spacing: 0.05rem;
-    background-color: #fff;
-    outline: none;
-    z-index: 1;
-
-    &.password {
-      letter-spacing: 0.2rem;
-    }
-  }
-
-  .btn {
-    margin: 0 auto;
-
-    & + a {
-      margin-left: 20px;
-    }
-  }
-
-  &.focused {
     .form-label {
-      transform: translate(0px, -15px);
+      position: absolute;
+      display: inline-block;
+      left: 0; top: 0;
+      width: auto;
+      height: 15px;
+      transform: translate(0px, 1px);
+      transform-origin: 0 0;
+      white-space: nowrap;
+      will-change: transform;
+      font-size: 13px;
+      color: #666;
+      padding: 0;
+      background-color: #fff;
+      cursor: text;
+      z-index: 10;
+      transition: transform .5s;
+    }
+
+    .form-control {
+      position: absolute;
+      left: 0; top: 0; bottom: 3px; right: 0;
+      width: 100%;
+      padding: 15px 0;
+      letter-spacing: 0.05rem;
+      background-color: #fff;
+      outline: none;
+      z-index: 1;
+
+      &.password {
+        letter-spacing: 0.2rem;
+      }
+    }
+
+    .btn {
+      margin: 0 auto;
+
+      & + a {
+        margin-left: 20px;
+      }
+    }
+
+    &.focused {
+      .form-label {
+        transform: translate(0px, -15px);
+      }
     }
   }
 }

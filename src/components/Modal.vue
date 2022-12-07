@@ -12,7 +12,6 @@ transition(name='modal-fade')
           | I'm the default body!
       footer.modal-footer
         slot(name='footer')
-          //- .btn(type='button' @click='close' aria-label='Close modal') Close
 </template>
 
 <script>
@@ -32,6 +31,7 @@ export default {
 
 .modal-backdrop {
   position: fixed;
+  z-index: 1000;
   top: 0;
   bottom: 0;
   left: 0;
@@ -54,26 +54,20 @@ export default {
 
   .modal {
     position: relative;
-    min-width: 500px;
-    background: $bg-color-beige;
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    background-color: #fff;
     border: 1px solid $lines-color;
     border-radius: $border-radius;
-    // box-shadow: 2px 2px 20px 1px rgba(0,0,0,0.05);
     overflow-x: auto;
     display: flex;
     flex-direction: column;
-
-    // .modal-header,
-    // .modal-footer {
-    //   padding: 15px 35px;
-    //   display: flex;
-    // }
 
     .modal-header {
       position: relative;
       padding: 15px 25% 0 14%;
       border-bottom: 1px solid $lines-color;
-      // justify-content: space-between;
 
       h2, h3 {
         margin: 0 !important;
@@ -82,8 +76,6 @@ export default {
 
     .modal-footer {
       padding: 15px 14%;
-      // border-top: 1px solid #eeeeee;
-      // justify-content: flex-end;
     }
 
     .modal-body {

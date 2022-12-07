@@ -157,8 +157,6 @@ export default {
     margin-left: 5px;
   }
 
-
-
   span {
     @include netbook() {
       display: none;

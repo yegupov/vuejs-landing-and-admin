@@ -67,10 +67,6 @@ function configSVGIcon(config) {
 }
 
 module.exports = {
-  // publicPath: '/vuelanding/', // For BUILD
-  // devServer: {
-  //   proxy: 'http://localhost:4000'
-  // },
   chainWebpack: config => {
     configSVGIcon(config);
   },

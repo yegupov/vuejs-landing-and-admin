@@ -7,7 +7,8 @@
 
 		ul.header__menu(ref='navmenu')
 			li.header__menuitem(v-for="link in menuItems" :key="link.title")
-				a.link(:href="link.href ? link.href : '#' + link.title" @click.prevent="followLink(link.title)") {{link.title}}
+				a.link(:href="link.href ? link.href : '#' + link.title" @click="toggleMenu") {{link.title}}
+
 				ul.header__submenu(v-if="link.subMenu && link.subMenu.length")
 					li(v-for="sublink in link.subMenu" :key="sublink.title")
 						a.link(:href='sublink.href' target="_blank") {{sublink.title}}
@@ -25,20 +26,10 @@
 export default {
 	name: 'HeaderBar',
 
-	props: {
-		topPosSections: {
-			type: Array,
-			default: () => ([]),
-			required: true
-		}
-	},
-
 	data: () => ({
 		menuItems: [
 			{title: 'YG websites', href: '/'},
-			// {title: 'home'},
 			{title: 'about'},
-			// {title: 'skills'},
 			{title: 'works'},
 			{title: 'reviews'},
 			{
@@ -48,8 +39,8 @@ export default {
 					{title: 'Profile', href: 'https://github.com/yegupov'},
 					{title: 'Portfolio', href: 'https://yegupov.github.io/'}
 				]
-			},
-			{title: 'contact'},
+			}
+			// {title: 'contact'},
 		]
 	}),
 
@@ -59,41 +50,6 @@ export default {
 			this.$refs['navicon'].classList.toggle('active');
 			this.$refs['navmenu'].classList.toggle('active');
 			// document.body.classList.toggle('noscroll');
-		},
-
-		followLink(href) {
-			const widthWindow = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-			if (widthWindow > 767.9) {
-				this.topPosSections.forEach( (section) => {
-					if (section.id === href) {
-						let top = section.topPos;
-						// if (section.id === 'reviews' || section.id === 'contact')
-						if (section.id === 'reviews') top = top + 135;
-						window.scrollTo({
-							top,
-							behavior: 'smooth',
-						});
-					}
-				});
-			} else {
-				const targetSec = document.getElementById(href);
-
-				if (targetSec !== null) {
-					this.$refs['navicon'].classList.remove('active');
-					this.$refs['navmenu'].classList.remove('active');
-
-					targetSec.scrollIntoView({
-						behavior: 'smooth', // smooth scroll
-						block: 'start' // the upper border of the element will be aligned at the top of the visible part of the window of the scrollable area.
-					})
-				}
-
-			}
-
-			setTimeout(() => {  // Delete Hash # from URL
-				history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
-			});
 		}
 	}
 }
@@ -105,7 +61,6 @@ export default {
 
 .header {
 	padding: 15px 0;
-	background-color: $bg-color-beige;
 
 	@include phone() {
 		height: 80px;

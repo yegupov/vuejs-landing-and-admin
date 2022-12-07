@@ -7,7 +7,11 @@
 	form
 		.form-group(:class="{'error': validation.firstError('editableSkill.title')}")
 			label.form-label Title
-			input.form-control(type='text' v-model='editableSkill.title' value='editableSkill.title' @change="disableSubmit = false")
+			input.form-control(
+				type='text'
+				v-model='editableSkill.title'
+				value='editableSkill.title'
+				@change="disableSubmit = false")
 			span.form-group__error
 				error-tooltip(:errorText="validation.firstError('editableSkill.title')")
 
@@ -24,8 +28,11 @@
 				error-tooltip(:errorText="validation.firstError('editableSkill.percent')")
 
 		.editform__btns
-			a(href="#" @click.prevent="hideForm").btn Cancel
-			button(type='submit' :disabled="disableSubmit" @click.prevent="saveSkill").btn.primary-btn Save
+			a.btn(href="#" @click.prevent="hideForm") Cancel
+			button.btn.primary-btn(
+				type='submit'
+				:disabled="disableSubmit"
+				@click.prevent="saveSkill") Save
 </template>
 
 <script>
